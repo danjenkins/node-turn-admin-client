@@ -1,6 +1,6 @@
 {
   "name": "turn-admin-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A tool to access live TURN administrative information",
   "main": "index.js",
   "scripts": {
