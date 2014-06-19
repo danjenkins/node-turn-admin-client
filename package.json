@@ -1,0 +1,21 @@
+{
+  "name": "turn-admin-client",
+  "version": "0.0.1",
+  "description": "A tool to access live TURN administrative information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "turn"
+  ],
+  "author": "Dan Jenkins",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^1.20.1",
+    "chai": "^1.9.1"
+  },
+  "dependencies": {
+    "carrier": "^0.1.14"
+  }
+}

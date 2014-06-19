@@ -1,0 +1,18 @@
+# Generated files/directories
+*.log
+.DS_Store
+.tmp
+mocha.json
+node_modules
+npm-debug.log
+
+# IntelliJ project files
+*.iml
+atlassian-ide-plugin.xml
+.idea
+
+# Sublime text
+*.sublime-workspace
+
+# Emacs
+.dir-locals.el
