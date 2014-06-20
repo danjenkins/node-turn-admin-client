@@ -1,0 +1,11 @@
+{
+  "name": "turn-admin-client",
+  "version": "0.1.0",
+  "dependencies": {
+    "carrier": {
+      "version": "0.1.14",
+      "from": "carrier@",
+      "resolved": "https://registry.npmjs.org/carrier/-/carrier-0.1.14.tgz"
+    }
+  }
+}
