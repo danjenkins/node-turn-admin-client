@@ -1,21 +1,18 @@
 {
   "name": "turn-admin-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tool to access live TURN administrative information",
   "keywords": [
     "turn"
   ],
   "bugs": {
-    "url" : "https://github.com/danjenkins/node-turn-admin-client/issues",
-    "email" : "me@dan-jenkins.co.uk"
+    "url": "https://github.com/danjenkins/node-turn-admin-client/issues",
+    "email": "me@dan-jenkins.co.uk"
   },
   "main": "index.js",
   "scripts": {
     "test": "mocha spec/**/*.spec.js"
   },
-  "keywords": [
-    "turn"
-  ],
   "author": "Dan Jenkins <me@dan-jenkins.co.uk>",
   "license": "MIT",
   "devDependencies": {
@@ -26,11 +23,11 @@
     "carrier": "^0.1.14"
   },
   "engines": {
-    "node" : ">=0.10.0 <0.12"
+    "node": ">=0.10.0 <0.12"
   },
   "engineStrict": "true",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/danjenkins/node-turn-admin-client.git"
+    "type": "git",
+    "url": "https://github.com/danjenkins/node-turn-admin-client.git"
   }
 }
