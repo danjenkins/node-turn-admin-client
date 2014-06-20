@@ -40,14 +40,14 @@ describe('run a mock turn interface server', function () {
       sessions[0].fingerprints.should.be.equal('OFF');
       sessions[0].mobile.should.be.equal('OFF');
       sessions[0].SHA256.should.be.equal('OFF');
-      sessions[0].SHA_type.should.be.equal('SHA1');
-      sessions[0].usage_rp.should.be.equal('6');
-      sessions[0].usage_rb.should.be.equal('1204');
-      sessions[0].usage_sp.should.be.equal('5');
-      sessions[0].usage_sb.should.be.equal('508');
-      sessions[0].rate_r.should.be.equal('0');
-      sessions[0].rate_s.should.be.equal('0');
-      sessions[0].rate_total.should.be.equal('0');
+      sessions[0].SHAType.should.be.equal('SHA1');
+      sessions[0].usageRP.should.be.equal('6');
+      sessions[0].usageRB.should.be.equal('1204');
+      sessions[0].usageSP.should.be.equal('5');
+      sessions[0].usageSB.should.be.equal('508');
+      sessions[0].rateR.should.be.equal('0');
+      sessions[0].rateS.should.be.equal('0');
+      sessions[0].rateTotal.should.be.equal('0');
       sessions[0].peers.should.be.instanceof(Array);
       sessions[0].peers.should.be.deep.equal([
         '10.24.65.91',
@@ -73,14 +73,14 @@ describe('run a mock turn interface server', function () {
       sessions[1].fingerprints.should.be.equal('OFF');
       sessions[1].mobile.should.be.equal('OFF');
       sessions[1].SHA256.should.be.equal('OFF');
-      sessions[1].SHA_type.should.be.equal('SHA1');
-      sessions[1].usage_rp.should.be.equal('6');
-      sessions[1].usage_rb.should.be.equal('1184');
-      sessions[1].usage_sp.should.be.equal('5');
-      sessions[1].usage_sb.should.be.equal('508');
-      sessions[1].rate_r.should.be.equal('0');
-      sessions[1].rate_s.should.be.equal('0');
-      sessions[1].rate_total.should.be.equal('0');
+      sessions[1].SHAType.should.be.equal('SHA1');
+      sessions[1].usageRP.should.be.equal('6');
+      sessions[1].usageRB.should.be.equal('1184');
+      sessions[1].usageSP.should.be.equal('5');
+      sessions[1].usageSB.should.be.equal('508');
+      sessions[1].rateR.should.be.equal('0');
+      sessions[1].rateS.should.be.equal('0');
+      sessions[1].rateTotal.should.be.equal('0');
       sessions[1].peers.should.be.instanceof(Array);
       sessions[1].peers.should.be.deep.equal([
         '10.24.65.91',

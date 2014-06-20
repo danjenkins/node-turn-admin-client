@@ -1,10 +1,8 @@
 'use strict';
 
 var carrier = require('carrier');
-var connection = require('./lib/connection');
+var connect = require('./lib/connection');
 var parse = require('./lib/parser');
-
-var conn;
 
 function TurnAdminClient(params) {
   this.port = params.port || 5766;
@@ -12,10 +10,11 @@ function TurnAdminClient(params) {
   this.username = params.username || null;
   this.password = params.password || null;
   this.encoding = params.encoding || 'utf8';
+  this.conn = null;
 }
 
 TurnAdminClient.prototype.init = function () {
-  conn = connection({
+  this.conn = connect({
     port: this.port,
     hostname: this.host,
     encoding: this.encoding
@@ -24,14 +23,14 @@ TurnAdminClient.prototype.init = function () {
 
 TurnAdminClient.prototype.getActiveSessions = function (cb) {
 
-  conn.write('ps');
+  this.conn.write('ps');
 
   var sessions = [];
 
-  carrier.carry(conn, function carrierCb(rawData) {
+  carrier.carry(this.conn, function carrierCb(rawData) {
 
     if (rawData.indexOf('Total sessions') !== -1) {
-      //when it gets to  "Total sessions <num>" we know we're done; check ther numbers are right!
+      //when it gets to  "Total sessions <num>" we know we're done; check the numbers are right!
       cb(null, sessions);
       return;
     }
@@ -49,7 +48,7 @@ TurnAdminClient.prototype.getActiveSessions = function (cb) {
 
 
 TurnAdminClient.prototype.disconnect = function () {
-  conn.end();
+  this.conn.end();
 };
 
 module.exports = TurnAdminClient;
