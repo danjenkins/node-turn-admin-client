@@ -15,7 +15,7 @@ describe('Parse some test admin TURN data', function () {
     results.id.should.be.equal('000000000000034864');
     results.user.should.be.equal('1-QzZGODU5MDMtOTk3MS00QzQ0LThDMDQtNjA0ODk0ODUzMzVC-TWF0dEZyZWRyaWNrc29uMg==-ODk0NkFFMzktMTA2Qi00OTZELThCRDEtRDE2OTQzMkZGRjlF.1401812136');
     results.started.should.be.equal('26');
-    results.starftedTimeFormat.should.be.equal('secs');
+    results.startedTimeFormat.should.be.equal('secs');
     results.expires.should.be.equal('574');
     results.expiresTimeFormat.should.be.equal('secs');
     results.clientProtocol.should.be.equal('UDP');
