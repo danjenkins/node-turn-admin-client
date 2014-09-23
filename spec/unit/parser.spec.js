@@ -10,6 +10,7 @@ var testString = fs.readFileSync(__dirname + '/lib/testString.txt');
 describe('Parse some test admin TURN data', function () {
   it('should return an object', function () {
     var results = parse(testString);
+    should.exist(results);
 
     results.recordNumber.should.be.equal('1');
     results.id.should.be.equal('000000000000034864');

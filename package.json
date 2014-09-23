@@ -5,29 +5,35 @@
   "keywords": [
     "turn"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danjenkins/node-turn-admin-client.git"
+  },
   "bugs": {
     "url": "https://github.com/danjenkins/node-turn-admin-client/issues",
     "email": "me@dan-jenkins.co.uk"
   },
   "main": "index.js",
   "scripts": {
-    "test": "mocha spec/**/*.spec.js"
+    "test": "mocha spec/**/*.spec.js",
+    "jshint": "jshint ."
   },
-  "author": "Dan Jenkins <me@dan-jenkins.co.uk>",
+  "precommit": [
+    "jshint",
+    "test"
+  ],
   "license": "MIT",
-  "devDependencies": {
-    "mocha": "^1.20.1",
-    "chai": "^1.9.1"
-  },
   "dependencies": {
     "carrier": "^0.1.14"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "jshint": "^2.5.6",
+    "mocha": "^1.20.1",
+    "precommit-hook": "^1.0.7"
   },
   "engines": {
     "node": ">=0.10.0 <0.12"
   },
-  "engineStrict": "true",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/danjenkins/node-turn-admin-client.git"
-  }
+  "engineStrict": "true"
 }
