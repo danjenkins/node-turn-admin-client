@@ -21,6 +21,8 @@ describe('run a mock turn interface server', function () {
 
     client.getActiveSessions(function (err, sessions) {
       client.disconnect();
+      should.exist(sessions);
+      sessions.should.be.an('array');
 
       //now check the sessions
       sessions[0].recordNumber.should.be.equal('1');
