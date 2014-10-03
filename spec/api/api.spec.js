@@ -7,6 +7,7 @@ var chai = require('chai');
 var should = chai.should();
 
 describe('run a mock turn interface server', function () {
+
   before(function () {
     mockServer = mockTurnServer();
   });
@@ -43,18 +44,18 @@ describe('run a mock turn interface server', function () {
       sessions[0].mobile.should.be.equal('OFF');
       sessions[0].SHA256.should.be.equal('OFF');
       sessions[0].SHAType.should.be.equal('SHA1');
-      sessions[0].usageRP.should.be.equal('6');
-      sessions[0].usageRB.should.be.equal('1204');
-      sessions[0].usageSP.should.be.equal('5');
-      sessions[0].usageSB.should.be.equal('508');
-      sessions[0].rateR.should.be.equal('0');
-      sessions[0].rateS.should.be.equal('0');
-      sessions[0].rateTotal.should.be.equal('0');
+      sessions[0].usageRP.should.be.equal('485803');
+      sessions[0].usageRB.should.be.equal('419430588');
+      sessions[0].usageSP.should.be.equal('398933');
+      sessions[0].usageSB.should.be.equal('325623225');
+      sessions[0].rateR.should.be.equal('255750');
+      sessions[0].rateS.should.be.equal('198550');
+      sessions[0].rateTotal.should.be.equal('454300');
       sessions[0].peers.should.be.instanceof(Array);
       sessions[0].peers.should.be.deep.equal([
         '10.24.65.91',
         '216.207.245.1',
-        '10.24.250.86',
+        '10.24.250.86:12345',
         '54.200.182.167'
       ]);
 
@@ -76,18 +77,18 @@ describe('run a mock turn interface server', function () {
       sessions[1].mobile.should.be.equal('OFF');
       sessions[1].SHA256.should.be.equal('OFF');
       sessions[1].SHAType.should.be.equal('SHA1');
-      sessions[1].usageRP.should.be.equal('6');
-      sessions[1].usageRB.should.be.equal('1184');
-      sessions[1].usageSP.should.be.equal('5');
-      sessions[1].usageSB.should.be.equal('508');
-      sessions[1].rateR.should.be.equal('0');
-      sessions[1].rateS.should.be.equal('0');
-      sessions[1].rateTotal.should.be.equal('0');
+      sessions[1].usageRP.should.be.equal('398934');
+      sessions[1].usageRB.should.be.equal('325625221');
+      sessions[1].usageSP.should.be.equal('485802');
+      sessions[1].usageSB.should.be.equal('419428548');
+      sessions[1].rateR.should.be.equal('199525');
+      sessions[1].rateS.should.be.equal('257002');
+      sessions[1].rateTotal.should.be.equal('456527');
       sessions[1].peers.should.be.instanceof(Array);
       sessions[1].peers.should.be.deep.equal([
         '10.24.65.91',
-        '216.207.245.1',
-        '10.24.250.86',
+        '216.207.245.1:12345',
+        '10.24.250.86:12345',
         '54.200.182.167'
       ]);
 

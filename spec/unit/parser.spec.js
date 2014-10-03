@@ -1,15 +1,13 @@
 'use strict';
 
 var parse = require('../../lib/parser');
-var fs = require('fs');
+var sampleSessionRecord = require('../fixtures').singleSessionEntry;
 var chai = require('chai');
 var should = chai.should();
 
-var testString = fs.readFileSync(__dirname + '/lib/testString.txt');
-
 describe('Parse some test admin TURN data', function () {
   it('should return an object', function () {
-    var results = parse(testString);
+    var results = parse(sampleSessionRecord);
     should.exist(results);
 
     results.recordNumber.should.be.equal('1');
@@ -25,18 +23,18 @@ describe('Parse some test admin TURN data', function () {
     results.mobile.should.be.equal('OFF');
     results.SHA256.should.be.equal('OFF');
     results.SHAType.should.be.equal('SHA1');
-    results.usageRP.should.be.equal('6');
-    results.usageRB.should.be.equal('1204');
-    results.usageSP.should.be.equal('5');
-    results.usageSB.should.be.equal('508');
-    results.rateR.should.be.equal('0');
-    results.rateS.should.be.equal('0');
-    results.rateTotal.should.be.equal('0');
+    results.usageRP.should.be.equal('485803');
+    results.usageRB.should.be.equal('419430588');
+    results.usageSP.should.be.equal('398933');
+    results.usageSB.should.be.equal('325623225');
+    results.rateR.should.be.equal('255750');
+    results.rateS.should.be.equal('198550');
+    results.rateTotal.should.be.equal('454300');
     results.peers.should.be.instanceof(Array);
     results.peers.should.be.deep.equal([
       '10.24.65.91',
       '216.207.245.1',
-      '10.24.250.86',
+      '10.24.250.86:12345',
       '54.200.182.167'
     ]);
   });
