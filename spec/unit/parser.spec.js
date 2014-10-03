@@ -1,15 +1,13 @@
 'use strict';
 
 var parse = require('../../lib/parser');
-var fs = require('fs');
+var sampleSessionRecord = require('../fixtures').singleSessionEntry;
 var chai = require('chai');
 var should = chai.should();
 
-var testString = fs.readFileSync(__dirname + '/lib/testString.txt');
-
 describe('Parse some test admin TURN data', function () {
   it('should return an object', function () {
-    var results = parse(testString);
+    var results = parse(sampleSessionRecord);
     should.exist(results);
 
     results.recordNumber.should.be.equal('1');
