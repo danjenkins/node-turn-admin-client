@@ -23,13 +23,13 @@ describe('Parse some test admin TURN data', function () {
     results.mobile.should.be.equal('OFF');
     results.SHA256.should.be.equal('OFF');
     results.SHAType.should.be.equal('SHA1');
-    results.usageRP.should.be.equal('6');
-    results.usageRB.should.be.equal('1204');
-    results.usageSP.should.be.equal('5');
-    results.usageSB.should.be.equal('508');
-    results.rateR.should.be.equal('0');
-    results.rateS.should.be.equal('0');
-    results.rateTotal.should.be.equal('0');
+    results.usageRP.should.be.equal('485803');
+    results.usageRB.should.be.equal('419430588');
+    results.usageSP.should.be.equal('398933');
+    results.usageSB.should.be.equal('325623225');
+    results.rateR.should.be.equal('255750');
+    results.rateS.should.be.equal('198550');
+    results.rateTotal.should.be.equal('454300');
     results.peers.should.be.instanceof(Array);
     results.peers.should.be.deep.equal([
       '10.24.65.91',

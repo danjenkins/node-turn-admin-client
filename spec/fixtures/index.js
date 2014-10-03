@@ -13,8 +13,8 @@ var firstEntry =
     "      mobile: OFF\r\n" +
     "      SHA256: OFF\r\n" +
     "      SHA type: SHA1\r\n" +
-    "      usage: rp=6, rb=1204, sp=5, sb=508\r\n" +
-    "       rate: r=0, s=0, total=0 (bytes per sec)\r\n" +
+    "      usage: rp=485803, rb=419430588, sp=398933, sb=325623225\r\n" +
+    "       rate: r=255750, s=198550, total=454300 (bytes per sec)\r\n" +
     "      peers:\r\n" +
     "          10.24.65.91\r\n" +
     "          216.207.245.1\r\n" +
@@ -32,8 +32,8 @@ var secondEntry =
     "      mobile: OFF\r\n" +
     "      SHA256: OFF\r\n" +
     "      SHA type: SHA1\r\n" +
-    "      usage: rp=6, rb=1184, sp=5, sb=508\r\n" +
-    "       rate: r=0, s=0, total=0 (bytes per sec)\r\n" +
+    "      usage: rp=398934, rb=325625221, sp=485802, sb=419428548\r\n" +
+    "       rate: r=199525, s=257002, total=456527 (bytes per sec)\r\n" +
     "      peers:\r\n" +
     "          10.24.65.91\r\n" +
     "          216.207.245.1\r\n" +
