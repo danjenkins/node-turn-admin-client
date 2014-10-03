@@ -34,7 +34,7 @@ describe('Parse some test admin TURN data', function () {
     results.peers.should.be.deep.equal([
       '10.24.65.91',
       '216.207.245.1',
-      '10.24.250.86',
+      '10.24.250.86:12345',
       '54.200.182.167'
     ]);
   });

@@ -55,7 +55,7 @@ describe('run a mock turn interface server', function () {
       sessions[0].peers.should.be.deep.equal([
         '10.24.65.91',
         '216.207.245.1',
-        '10.24.250.86',
+        '10.24.250.86:12345',
         '54.200.182.167'
       ]);
 
@@ -87,8 +87,8 @@ describe('run a mock turn interface server', function () {
       sessions[1].peers.should.be.instanceof(Array);
       sessions[1].peers.should.be.deep.equal([
         '10.24.65.91',
-        '216.207.245.1',
-        '10.24.250.86',
+        '216.207.245.1:12345',
+        '10.24.250.86:12345',
         '54.200.182.167'
       ]);
 
