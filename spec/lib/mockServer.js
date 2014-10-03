@@ -1,8 +1,7 @@
 'use strict';
 
 var net = require('net');
-var fs = require('fs');
-var testData =  fs.readFileSync(__dirname + '/testData.txt');
+var fixtures = require('../fixtures');
 
 module.exports = function () {
   var server = net.createServer(function (conn) {
@@ -15,17 +14,11 @@ module.exports = function () {
 
     conn.on('data', function (data) {
       if (data.indexOf('ps') !== -1) {
-        conn.write('\n' + testData + '\n>');
+        conn.write(fixtures.fullSessionData + fixtures.prompt);
       }
     });
 
-    conn.write(
-      'TURN Server\n' +
-      'rfc5766-turn-server\n' +
-      'Citrix-3.2.2.8 \'Marshal West\'\n\n' +
-      'Type \'?\' for help\n' +
-      '>'
-    );
+    conn.write(fixtures.welcomeMessageData + fixtures.prompt);
   });
 
   server.listen(8124, function () {
